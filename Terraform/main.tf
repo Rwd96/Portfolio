@@ -19,3 +19,4 @@ orsade_click_cloudfront_hosted_zone_id = module.cloud_front.orsade_click_cloudfr
 orsade_click_cloudfront_hosted_zone_domain_name = module.cloud_front.orsade_click_cloudfront_hosted_zone_domain_name
 }
 
+//test
