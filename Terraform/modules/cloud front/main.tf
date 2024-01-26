@@ -1,6 +1,7 @@
 
 
 resource "aws_cloudfront_distribution" "orsade_click_cloudfront" {
+  depends_on = [var.aws_s3_bucket_policy_orsade-website-bucket-policy]
   origin {
     domain_name              = var.aws_s3_bucket_bucket_domain_name
     origin_id                = var.aws_s3_bucket_bucket_domain_name 
