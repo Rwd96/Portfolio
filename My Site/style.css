@@ -193,7 +193,7 @@ span {
 
 .about-content h2 {
     text-align: center;
-    line-height: 1.2;
+    line-height: 1.8;
 }
 
 .about-content h3 {
@@ -499,11 +499,11 @@ span {
     background: var(--bg-color);
     color: var(--text-color);
     text-align: center;
-    padding: 10rem 9% 2rem; /* Adjusted padding for consistency */
+    padding: 10rem 9% 2rem; 
 }
 
 .Education h2 {
-    margin-bottom: 10rem;
+    margin-bottom: 0rem;
 }
 
 .Education-content {
@@ -539,8 +539,8 @@ span {
 }
 
 .Education-img img {
-    width: 100%; /* Adjusted image width for consistency */
-    max-width: 25rem; /* Adjusted max-width for larger images */
+    width: 100%; 
+    max-width: 25rem; 
     height: auto;
     margin: 1rem;
 }
@@ -554,7 +554,7 @@ span {
 @media (max-width: 365px) {
     .Education-img img {
         width: 90vw;
-        max-width: none; /* Reset max-width for smaller screens */
+        max-width: none; 
     }
 }
 
