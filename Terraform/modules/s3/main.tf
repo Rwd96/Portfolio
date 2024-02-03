@@ -45,6 +45,7 @@ resource "aws_s3_bucket_public_access_block" "ReadOnly-All" {
   restrict_public_buckets = false
 }
 
+
 resource "aws_s3_bucket_policy" "orsade-website-bucket-policy" {
   depends_on = [aws_s3_bucket.orsade-website]
 
@@ -67,3 +68,6 @@ resource "aws_s3_bucket_policy" "orsade-website-bucket-policy" {
 }
 EOF
 }
+
+
+#this is a test 
