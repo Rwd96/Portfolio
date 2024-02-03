@@ -179,9 +179,17 @@ span {
     background: var(--second-bg-color);
 }
 
+.about-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .about-img img {
-    width: 8vw;
-    margin-bottom: 1rem; 
+    width: 100%; 
+    max-width: 25rem; 
+    height: auto;
+    margin-bottom: 1rem;
     margin-right: 30px;
     margin-top: 30px;
 }
@@ -205,6 +213,7 @@ span {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
+
 
 
 
