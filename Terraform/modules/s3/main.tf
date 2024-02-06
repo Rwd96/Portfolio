@@ -68,6 +68,3 @@ resource "aws_s3_bucket_policy" "orsade-website-bucket-policy" {
 }
 EOF
 }
-
-
-#this is a test 
