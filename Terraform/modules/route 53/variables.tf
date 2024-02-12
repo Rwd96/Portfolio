@@ -15,4 +15,3 @@ variable "orsade_click_cloudfront_hosted_zone_id" {
 variable "orsade_click_cloudfront_hosted_zone_domain_name" {
  type = string
 }
-

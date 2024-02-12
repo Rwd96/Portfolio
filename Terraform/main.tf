@@ -10,6 +10,8 @@ module "cloud_front" {
   source = "./modules/cloud front"
 aws_s3_bucket_bucket_domain_name = module.s3.aws_s3_bucket_bucket_domain_name
 orsade_click_acm_arn = module.route_53.orsade_click_acm_arn
+aws_s3_bucket_website_configuration-orsade-website = module.s3.aws_s3_bucket_website_configuration-orsade-website
+
 }
 
 module "route_53" {

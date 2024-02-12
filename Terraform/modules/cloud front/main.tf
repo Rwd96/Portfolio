@@ -3,7 +3,7 @@
 resource "aws_cloudfront_distribution" "orsade_click_cloudfront" {
   origin {
     domain_name              = var.aws_s3_bucket_bucket_domain_name
-    origin_id                = var.aws_s3_bucket_bucket_domain_name 
+    origin_id                = var.aws_s3_bucket_website_configuration-orsade-website
   }
 
   enabled             = true
@@ -16,7 +16,7 @@ resource "aws_cloudfront_distribution" "orsade_click_cloudfront" {
   default_cache_behavior {
     allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
     cached_methods   = ["GET", "HEAD"]
-    target_origin_id = var.aws_s3_bucket_bucket_domain_name
+    target_origin_id = var.aws_s3_bucket_website_configuration-orsade-website
 
     forwarded_values {
       query_string = false
@@ -38,7 +38,7 @@ aliases = [ "orsade.click" , "www.orsade.click" ]
     path_pattern     = "/content/immutable/*"
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
     cached_methods   = ["GET", "HEAD", "OPTIONS"]
-    target_origin_id = var.aws_s3_bucket_bucket_domain_name
+    target_origin_id = var.aws_s3_bucket_website_configuration-orsade-website
 
     forwarded_values {
       query_string = false
@@ -60,7 +60,7 @@ aliases = [ "orsade.click" , "www.orsade.click" ]
     path_pattern     = "/content/*"
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
     cached_methods   = ["GET", "HEAD"]
-    target_origin_id = var.aws_s3_bucket_bucket_domain_name
+    target_origin_id = var.aws_s3_bucket_website_configuration-orsade-website
 
     forwarded_values {
       query_string = false

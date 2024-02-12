@@ -2,6 +2,16 @@ resource "aws_s3_bucket" "orsade-website" {
   bucket = "www.orsade.click"
 }
 
+resource "aws_s3_bucket_website_configuration" "orsade-website" {
+  bucket = aws_s3_bucket.orsade-website.id
+
+  index_document {
+    suffix = "index.html"
+  }
+}
+
+
+
 resource "aws_s3_object" "orsade-website-objects-imagesANDpdf" {
   bucket = aws_s3_bucket.orsade-website.bucket
   for_each = fileset("../My Site/images/", "**/*")
