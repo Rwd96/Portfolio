@@ -10,8 +10,6 @@ resource "aws_s3_bucket_website_configuration" "orsade-website" {
   }
 }
 
-
-
 resource "aws_s3_object" "orsade-website-objects-imagesANDpdf" {
   bucket = aws_s3_bucket.orsade-website.bucket
   for_each = fileset("../My Site/images/", "**/*")
@@ -55,10 +53,12 @@ resource "aws_s3_bucket_public_access_block" "ReadOnly-All" {
   restrict_public_buckets = false
 }
 
+resource "time_sleep" "wait_30s" {
+  create_duration = "30s"
+}
 
 resource "aws_s3_bucket_policy" "orsade-website-bucket-policy" {
-  depends_on = [aws_s3_bucket.orsade-website]
-
+  depends_on = [aws_s3_bucket.orsade-website, time_sleep.wait_30s]
   bucket = aws_s3_bucket.orsade-website.bucket
 
   policy = <<EOF
