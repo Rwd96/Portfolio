@@ -39,7 +39,7 @@ jobs:
     needs: build-infra
     steps:
       - name: Sync Website Files to S3 Bucket
-        run: aws s3 sync ./My Site s3://your-s3-bucket-name/
+        run: aws s3 sync ./My Site s3://www.orsade.click/
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
