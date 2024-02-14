@@ -33,14 +33,3 @@ jobs:
         run: terraform apply --auto-approve
         working-directory: ./Terraform
         
-  deploy-website:
-    name: Deploy Website
-    runs-on: ubuntu-latest
-    needs: build-infra
-    steps:
-      - name: Sync Website Files to S3 Bucket
-        run: aws s3 sync ./My Site s3://www.orsade.click/
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: us-east-1
