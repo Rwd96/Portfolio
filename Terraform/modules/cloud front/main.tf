@@ -7,7 +7,7 @@ resource "aws_cloudfront_distribution" "orsade_click_cloudfront" {
   }
 
   enabled             = true
-  is_ipv6_enabled     = true
+  is_ipv6_enabled     = false
   comment             = "www.orsade.click"
   default_root_object = "index.html"
 

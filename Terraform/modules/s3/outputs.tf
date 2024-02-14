@@ -11,8 +11,9 @@ output "aws_s3_bucket_bucket_domain_name" {
 
 output "aws_s3_bucket_website_configuration-orsade-website" {
     description = "www.orsade.click s3 bucket website configuration"
-    value = aws_s3_bucket_website_configuration.orsade-website.id
+    value = aws_s3_bucket_website_configuration.orsade-website.website_endpoint
 }
+
 
 
 
