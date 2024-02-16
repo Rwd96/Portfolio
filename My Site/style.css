@@ -693,3 +693,50 @@ span {
         width: 90vw;
     }
 }
+
+
+/* Additional styles specific to error.html */
+/* style.css */
+
+.error-body {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.error-container {
+    text-align: center;
+}
+
+.error-container h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.error-container h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+#goToButton {
+    background-color: #0ef;
+    color: #000;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0, 255, 238, 0.8);
+    transition: box-shadow 0.3s;
+}
+
+#goToButton:hover {
+    box-shadow: none;
+}

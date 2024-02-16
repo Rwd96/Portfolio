@@ -8,6 +8,10 @@ resource "aws_s3_bucket_website_configuration" "orsade-website" {
   index_document {
     suffix = "index.html"
   }
+
+  error_document {
+    key = "eror.html"
+  }
 }
 
 resource "aws_s3_object" "orsade-website-objects-imagesANDpdf" {
@@ -17,12 +21,20 @@ resource "aws_s3_object" "orsade-website-objects-imagesANDpdf" {
   source   = "../My Site/images/${each.value}"
 }
 
-resource "aws_s3_object" "orsade-website-objects-html" {
+resource "aws_s3_object" "orsade-website-objects-index-html" {
   bucket       = aws_s3_bucket.orsade-website.id
   key          = "index.html"
   source       = "../My Site/index.html"
   content_type = "text/html"
 }
+
+resource "aws_s3_object" "orsade-website-objects-eror-html" {
+  bucket       = aws_s3_bucket.orsade-website.id
+  key          = "eror.html"
+  source       = "../My Site/eror.html"
+  content_type = "text/html"
+}
+
 
 resource "aws_s3_object" "orsade-website-objects-css" {
   bucket       = aws_s3_bucket.orsade-website.id
